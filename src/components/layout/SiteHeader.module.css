@@ -1,0 +1,23 @@
+.header { position: sticky; z-index: 10; top: 0; background: var(--paper-overlay); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
+.inner { min-height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
+.brand { display: inline-flex; align-items: center; gap: 11px; flex-shrink: 0; color: var(--ink); font-size: 13px; font-weight: 700; letter-spacing: -.02em; text-decoration: none; }
+.mark { width: 34px; height: 34px; display: grid; place-items: center; color: white; background: var(--button-primary); border-radius: 9px; font-size: 11px; letter-spacing: -.04em; }
+.navigation { display: flex; align-items: center; gap: 22px; margin-left: auto; margin-right: 16px; }
+.navigation a { color: var(--text-nav); font-size: 12px; font-weight: 600; white-space: nowrap; text-decoration: none; transition: color .18s ease; }
+.navigation a:hover { color: var(--blue); }
+.cta { padding: 11px 15px; border-radius: 5px; background: var(--button-primary); color: white; font-size: 11px; font-weight: 700; text-decoration: none; transition: background .18s ease, transform .18s ease; }
+.cta span { margin-left: 8px; }
+.cta:hover { background: var(--button-primary-hover); transform: translateY(-1px); }
+@media (max-width: 1100px) {
+  .inner { min-height: 70px; flex-wrap: wrap; gap: 10px 13px; padding-block: 11px; }
+  .navigation { order: 3; width: 100%; justify-content: space-between; gap: 12px; margin: 0; padding: 7px 0 1px; }
+  .navigation a { font-size: 10px; }
+  .cta { margin-left: auto; }
+}
+@media (max-width: 520px) {
+  .inner { gap: 10px; }
+  .brand { font-size: 12px; }
+  .mark { width: 31px; height: 31px; }
+  .cta { padding: 10px 12px; font-size: 10px; }
+  .navigation { overflow-x: auto; justify-content: flex-start; gap: 23px; padding-bottom: 2px; }
+}

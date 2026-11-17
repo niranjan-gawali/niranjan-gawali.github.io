@@ -1,0 +1,11 @@
+.section { padding-block: 54px 60px; }
+.card { display: flex; align-items: center; justify-content: space-between; gap: 32px; min-height: 230px; padding: 42px 52px; border-radius: 9px; color: #fff; background-color: var(--contact-surface); background-image: radial-gradient(circle at 85% 20%, rgb(255 255 255 / 8%) 0 1px, transparent 1.5px); background-size: 14px 14px; }
+.eyebrow { margin: 0 0 17px; color: var(--contact-eyebrow); font-size: 9px; font-weight: 800; letter-spacing: .13em; }
+.card h2 { margin: 0 0 9px; font-family: var(--serif); font-size: 45px; font-weight: 400; letter-spacing: -.035em; }
+.description { margin: 0; color: var(--contact-muted); font-size: 11px; }
+.contactDetails { min-width: 250px; display: grid; gap: 15px; }
+.email { display: flex; align-items: center; justify-content: space-between; gap: 15px; padding: 16px 17px; border: 1px solid rgb(255 255 255 / 28%); border-radius: 5px; color: var(--contact-text); font-size: 12px; font-weight: 700; text-decoration: none; }
+.email:hover, .profiles a:hover { background: rgb(255 255 255 / 8%); }
+.profiles { display: flex; gap: 8px; }
+.profiles a { display: inline-flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 4px; color: var(--contact-text); font-size: 9px; text-decoration: none; }
+@media (max-width: 520px) { .section { padding-block: 30px 42px; } .card { align-items: flex-start; flex-direction: column; gap: 25px; min-height: 0; padding: 30px 24px; } .card h2 { font-size: 39px; } .contactDetails { width: 100%; min-width: 0; } .email { overflow-wrap: anywhere; font-size: 11px; } }

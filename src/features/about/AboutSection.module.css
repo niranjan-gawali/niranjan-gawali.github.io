@@ -1,0 +1,11 @@
+.section { padding-block: 92px 96px; }
+.grid { display: grid; grid-template-columns: .82fr 1.18fr; gap: 100px; }
+.content { padding-top: 22px; }
+.lede { max-width: 650px; margin: 0 0 28px; color: var(--text-body); font-family: var(--serif); font-size: 24px; line-height: 1.48; letter-spacing: -.015em; }
+.stat { display: flex; align-items: center; gap: 18px; max-width: 540px; padding: 19px 22px; border: 1px solid var(--border-soft); border-radius: 7px; background: var(--surface-muted); }
+.number { color: var(--blue); font-family: var(--serif); font-size: 50px; line-height: .9; letter-spacing: -.06em; }
+.statCopy { display: grid; gap: 5px; color: var(--text-strong); font-size: 11px; }
+.statCopy small { color: var(--muted); font-size: 10px; }
+.mark { margin-left: auto; color: var(--blue); font-size: 24px; }
+@media (max-width: 850px) { .section { padding-block: 65px; } .grid { grid-template-columns: 1fr; gap: 14px; } .content { padding-top: 0; } }
+@media (max-width: 520px) { .section { padding-block: 58px; } .lede { font-size: 21px; } .stat { gap: 13px; padding: 16px; } .number { font-size: 44px; } }

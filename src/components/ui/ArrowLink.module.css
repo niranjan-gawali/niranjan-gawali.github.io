@@ -1,0 +1,8 @@
+.link { display: inline-flex; align-items: center; justify-content: space-between; gap: 14px; min-height: 42px; padding: 0 15px; border: 1px solid transparent; border-radius: 4px; font-size: 10px; font-weight: 700; text-decoration: none; transition: background .18s ease, color .18s ease, border-color .18s ease, transform .18s ease; }
+.primary { color: #fff; background: var(--button-primary); }
+.primary:hover { background: var(--button-primary-hover); transform: translateY(-1px); }
+.secondary { color: var(--ink); background: var(--surface-soft); border-color: var(--border-soft); }
+.secondary:hover { color: var(--blue); border-color: var(--focus); }
+.text { min-height: 0; padding: 0; color: var(--blue); }
+.text:hover { color: var(--blue-hover); }
+.arrow { font-size: 13px; line-height: 1; }
