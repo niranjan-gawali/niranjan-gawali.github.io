@@ -10,12 +10,24 @@ function clearUrlFragment() {
   )
 }
 
+function scrollToTarget(target: HTMLElement) {
+  // The #top target is the sticky header, which stays visible while scrolling.
+  // Scroll the document itself so Back to Top always returns to the page start.
+  if (target.id === 'top') {
+    window.scrollTo({ top: 0, behavior: 'auto' })
+    return
+  }
+
+  target.scrollIntoView()
+}
+
 export function useCleanAnchorNavigation() {
   useEffect(() => {
     // Keep existing section links working while removing their fragment from the URL.
     if (window.location.hash) {
       try {
-        document.getElementById(decodeURIComponent(window.location.hash.slice(1)))?.scrollIntoView()
+        const initialTarget = document.getElementById(decodeURIComponent(window.location.hash.slice(1)))
+        if (initialTarget) scrollToTarget(initialTarget)
       } catch {
         // Ignore malformed fragments and still normalize the URL below.
       }
@@ -49,7 +61,7 @@ export function useCleanAnchorNavigation() {
       if (!target) return
 
       event.preventDefault()
-      target.scrollIntoView()
+      scrollToTarget(target)
 
       if (target.id === 'main-content') {
         target.focus({ preventScroll: true })
