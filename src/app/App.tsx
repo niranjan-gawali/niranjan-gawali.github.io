@@ -10,8 +10,11 @@ import { SiteFooter } from '../components/layout/SiteFooter'
 import { SiteHeader } from '../components/layout/SiteHeader'
 import { siteContent } from '../data/siteContent'
 import { THEME_STORAGE_KEY, type Theme } from './theme'
+import { useCleanAnchorNavigation } from './useCleanAnchorNavigation'
 
 export default function App() {
+  useCleanAnchorNavigation()
+
   const [theme, setTheme] = useState<Theme>(() => {
     const documentTheme = document.documentElement.dataset.theme
     if (documentTheme === 'dark' || documentTheme === 'light') return documentTheme
@@ -32,7 +35,7 @@ export default function App() {
     <>
       <a className="skip-link" href="#main-content">Skip to content</a>
       <SiteHeader brand={siteContent.brand} navigation={siteContent.navigation} theme={theme} onToggleTheme={toggleTheme} />
-      <main id="main-content">
+      <main id="main-content" tabIndex={-1}>
         <HeroSection content={siteContent.hero} />
         <AboutSection content={siteContent.about} />
         <ExperienceSection content={siteContent.experience} />
