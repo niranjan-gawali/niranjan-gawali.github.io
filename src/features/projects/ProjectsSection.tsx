@@ -30,13 +30,26 @@ export function ProjectsSection({ content }: { content: ProjectsContent }) {
       </section>
       <section className={`section-divider ${styles.section}`} id={content.personal.id} aria-label={content.personal.title}>
         <Container>
-          <SectionHeading eyebrow={content.personal.eyebrow} title={content.personal.title} className={styles.mainHeading} />
-          <div className={styles.personal}>
-            <div className={styles.subsectionHeading}>
-              <h3>{content.personal.statusTitle}</h3>
-              <span className={styles.status}><span />UPCOMING</span>
-            </div>
-            <p className={styles.personalDescription}>{content.personal.description}</p>
+          <SectionHeading eyebrow={content.personal.eyebrow} title={content.personal.title} description={content.personal.description} className={styles.mainHeading} />
+          <div className={styles.personalGrid}>
+            {content.personal.entries.map((project) => (
+              <a className={styles.personalCard} href={project.href} key={project.name}>
+                <div className={styles.personalCardTopline}>
+                  <span>{project.category}</span>
+                  <span className={styles.status}><span />{project.status}</span>
+                </div>
+                <div className={styles.personalCardBody}>
+                  <div>
+                    <h3>{project.name}</h3>
+                    <p className={styles.personalDescription}>{project.description}</p>
+                  </div>
+                  <span className={styles.projectAction}>Explore project <span aria-hidden="true">↗</span></span>
+                </div>
+                <ul className={styles.technologies} aria-label={`${project.name} technologies`}>
+                  {project.technologies.map((technology) => <li key={technology}>{technology}</li>)}
+                </ul>
+              </a>
+            ))}
           </div>
         </Container>
       </section>

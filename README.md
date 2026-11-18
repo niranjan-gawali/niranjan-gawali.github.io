@@ -46,7 +46,11 @@ Each feature owns its section component and CSS module. Shared UI belongs in `co
 
 - Update confirmed copy and navigation in `src/data/siteContent.ts`.
 - Update the resume-derived timeline, professional project cards, technologies, certifications, education, and contact links in `src/data/siteContent.ts`.
-- Add independent work to the Personal Projects area; its current state is intentionally marked as upcoming.
+- Add independent work to `projects.personal.entries` in `src/data/siteContent.ts`.
 - Project cards are rendered from data so new personal or professional projects can be added without duplicating section markup.
 
-The current experience, project, and contact sections intentionally use neutral empty states.
+## GroundNest project page
+
+GroundNest has a dedicated page at `/projects/groundnest/`. Vite builds its HTML entry at `projects/groundnest/index.html`, so GitHub Pages can serve the page directly and on refresh.
+
+Edit the project description, features, and download URLs in `src/data/groundNestProject.ts`. To activate a V1 download, replace the matching platform's `href: null` with its public release asset URL, for example a GitHub Releases download link. Until a URL is supplied, that platform shows “V1 link coming soon” without a clickable download. The supported slots are macOS Apple Silicon, Windows x64, and Ubuntu x64. Keep large installers in release storage rather than this website repository.

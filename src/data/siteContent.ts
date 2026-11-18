@@ -27,6 +27,15 @@ export interface ProjectEntry {
   technologies: string[]
 }
 
+export interface PersonalProjectEntry {
+  name: string
+  category: string
+  status: string
+  description: string
+  technologies: string[]
+  href: string
+}
+
 export const siteContent = {
   brand: {
     name: 'Niranjan Gawali',
@@ -130,8 +139,17 @@ export const siteContent = {
       id: 'personal-projects',
       eyebrow: '05 / PERSONAL PROJECTS',
       title: 'Personal projects',
-      statusTitle: 'Coming soon',
-      description: 'I’m preparing a few independent projects to share here. Check back soon for updates and download links.',
+      description: 'Independent products I’m building and sharing beyond my professional work.',
+      entries: [
+        {
+          name: 'GroundNest',
+          category: 'Local AI · Desktop application',
+          status: 'Preview',
+          description: 'A desktop AI workspace for chatting with local Ollama models and asking questions across your own documents.',
+          technologies: ['React', 'TypeScript', 'Electron', 'NestJS', 'SQLite', 'LanceDB', 'Ollama'],
+          href: '/projects/groundnest/',
+        },
+      ] satisfies PersonalProjectEntry[],
     },
     professional: {
       id: 'professional-work',
@@ -202,7 +220,7 @@ export const siteContent = {
     ] satisfies ProjectEntry[],
     },
   } satisfies {
-    personal: SectionContent & { statusTitle: string; description: string }
+    personal: SectionContent & { description: string; entries: PersonalProjectEntry[] }
     professional: SectionContent & { entries: ProjectEntry[] }
   },
   credentials: {

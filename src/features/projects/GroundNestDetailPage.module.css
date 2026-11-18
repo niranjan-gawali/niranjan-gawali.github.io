@@ -1,0 +1,85 @@
+.header { position: sticky; z-index: 10; top: 0; border-bottom: 1px solid var(--line); background: var(--paper-overlay); backdrop-filter: blur(12px); }
+.headerInner { display: flex; min-height: 78px; align-items: center; justify-content: space-between; gap: 24px; }
+.brand { display: inline-flex; align-items: center; gap: 11px; color: var(--ink); font-size: 13px; font-weight: 700; text-decoration: none; }
+.mark { display: grid; width: 34px; height: 34px; place-items: center; border-radius: 9px; color: #fff; background: var(--button-primary); font-size: 11px; }
+.headerActions { display: flex; align-items: center; gap: 20px; }
+.headerActions > a, .backLink { color: var(--text-nav); font-size: 11px; font-weight: 700; text-decoration: none; }
+.headerActions > a:hover, .backLink:hover { color: var(--blue); }
+.hero { padding-block: 35px 78px; }
+.backLink { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 33px; }
+.backLink span { color: var(--blue); font-size: 16px; }
+.heroGrid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(280px, .8fr); align-items: center; gap: 50px; }
+.heroCopy { max-width: 660px; }
+.eyebrow, .sectionEyebrow { margin: 0 0 17px; color: var(--text-body); font-size: 9px; font-weight: 800; letter-spacing: .14em; }
+.eyebrow { display: flex; align-items: center; gap: 9px; }
+.eyebrow > span, .status > span { width: 6px; height: 6px; border-radius: 50%; background: var(--blue); }
+.hero h1 { margin: 0 0 18px; color: var(--ink); font-family: var(--serif); font-size: clamp(54px, 7vw, 86px); font-weight: 400; line-height: .98; letter-spacing: -.05em; }
+.summary { max-width: 560px; margin: 0 0 23px; color: var(--text-strong); font-size: 15px; font-weight: 600; line-height: 1.8; }
+.status { display: inline-flex; align-items: center; gap: 8px; padding: 8px 11px; border: 1px solid var(--border-soft); border-radius: 30px; color: var(--text-nav); background: var(--surface); font-size: 9px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.heroVisual { position: relative; display: grid; min-height: 310px; place-items: center; overflow: hidden; border: 1px solid var(--border-soft); border-radius: 10px; background: radial-gradient(circle at center, var(--surface) 0, var(--surface-personal) 68%); }
+.visualOrb { position: relative; display: grid; width: 190px; height: 190px; place-items: center; border: 1px solid var(--diagram-stroke); border-radius: 50%; background: radial-gradient(circle, var(--surface-blue), transparent 72%); box-shadow: 0 0 60px var(--card-shadow); }
+.orbRing { position: absolute; inset: 20px; border: 1px dashed var(--diagram-line); border-radius: 50%; }
+.orbCore { display: grid; width: 74px; height: 74px; place-items: center; border: 1px solid var(--focus); border-radius: 23px; color: var(--blue); background: var(--surface); font-family: var(--serif); font-size: 38px; box-shadow: 0 10px 28px var(--card-shadow); }
+.orbNode { position: absolute; top: 25px; right: 26px; width: 15px; height: 15px; border: 3px solid var(--surface); border-radius: 50%; background: var(--blue); box-shadow: 0 0 0 1px var(--focus); }
+.visualCaption { position: absolute; bottom: 20px; color: var(--soft); font-size: 8px; font-weight: 800; letter-spacing: .12em; }
+.section { padding-block: 70px; }
+.introGrid { display: grid; grid-template-columns: minmax(230px, .8fr) minmax(0, 1.2fr); gap: 60px; }
+.introGrid h2, .sectionHeading h2, .contributionCard h2, .technologyPanel h2, .statusPanel h2 { margin: 0; color: var(--ink); font-family: var(--serif); font-size: clamp(28px, 3vw, 38px); font-weight: 400; line-height: 1.12; letter-spacing: -.035em; }
+.bodyCopy { color: var(--muted); font-size: 12px; line-height: 1.9; }
+.bodyCopy p { margin: 0 0 16px; }
+.sectionHeading { max-width: 650px; margin-bottom: 30px; }
+.sectionDescription { margin: 14px 0 0; color: var(--muted); font-size: 11px; line-height: 1.8; }
+.featureGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: 0; padding: 0; list-style: none; }
+.feature { min-height: 146px; padding: 20px; border: 1px solid var(--border-soft); border-radius: 7px; background: var(--surface-glass); }
+.featureNumber { color: var(--blue); font-size: 9px; font-weight: 800; letter-spacing: .1em; }
+.feature p { margin: 18px 0 0; color: var(--text-strong); font-size: 11px; font-weight: 600; line-height: 1.75; }
+.detailGrid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 15px; }
+.contributionCard, .technologyPanel { padding: 30px; border: 1px solid var(--border-soft); border-radius: 8px; background: var(--surface-personal); }
+.contributionCard > p:last-child { max-width: 540px; margin: 18px 0 0; color: var(--muted); font-size: 11px; line-height: 1.9; }
+.technologyList { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0 0; padding: 0; list-style: none; }
+.technologyList li { padding: 7px 10px; border: 1px solid var(--border-chip); border-radius: 4px; color: var(--text-chip); background: var(--surface-raised); font-size: 9px; font-weight: 600; }
+.buildDescription { margin: 18px 0 0; color: var(--muted); font-size: 11px; line-height: 1.8; }
+.downloadGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.downloadCard { display: flex; min-height: 208px; flex-direction: column; align-items: flex-start; padding: 21px; border: 1px solid var(--border-soft); border-radius: 7px; background: var(--surface-glass); }
+.platformIcon { display: grid; width: 34px; height: 34px; place-items: center; border-radius: 8px; color: var(--blue); background: var(--surface-blue); font-size: 17px; }
+.downloadCard h3 { margin: 17px 0 3px; color: var(--ink); font-family: var(--serif); font-size: 23px; font-weight: 400; }
+.downloadCard > p { margin: 0 0 17px; color: var(--muted); font-size: 10px; }
+.downloadPending, .downloadLink { margin-top: auto; color: var(--soft); font-size: 9px; font-weight: 700; }
+.downloadLink { color: var(--blue); text-decoration: none; }
+.downloadLink span { margin-left: 6px; font-size: 13px; }
+.statusSection { padding-block: 56px 70px; }
+.statusPanel { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(230px, .7fr); align-items: center; gap: 40px; padding: 30px; border: 1px solid var(--border-soft); border-radius: 8px; background: var(--surface-personal); }
+.statusPanel h2 { font-size: 30px; }
+.statusPanel > div > p:last-child { max-width: 680px; margin: 15px 0 0; color: var(--muted); font-size: 11px; line-height: 1.85; }
+.privacyNote { display: flex; align-items: flex-start; gap: 12px; padding: 17px; border: 1px solid var(--border-soft); border-radius: 6px; background: var(--surface); }
+.privacyNote > span { color: var(--blue); font-size: 18px; }
+.privacyNote p { margin: 0; color: var(--text-nav); font-size: 10px; line-height: 1.7; }
+.footer { display: flex; min-height: 82px; align-items: center; justify-content: space-between; gap: 18px; border-top: 1px solid var(--line); color: var(--soft); font-size: 9px; }
+.footer a { color: var(--text-nav); font-size: 9px; font-weight: 800; letter-spacing: .08em; text-decoration: none; }
+.footer a:hover { color: var(--blue); }
+.footer > a:first-child { color: var(--text-strong); font-size: 10px; letter-spacing: 0; }
+@media (max-width: 800px) {
+  .heroGrid, .introGrid, .detailGrid, .statusPanel { grid-template-columns: 1fr; }
+  .heroGrid { gap: 35px; }
+  .heroVisual { min-height: 260px; }
+  .introGrid { gap: 22px; }
+  .featureGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 520px) {
+  .headerInner { min-height: 68px; }
+  .headerActions { gap: 12px; }
+  .headerActions > a { font-size: 10px; }
+  .hero { padding-block: 26px 55px; }
+  .backLink { margin-bottom: 26px; }
+  .hero h1 { font-size: 56px; }
+  .summary { font-size: 13px; }
+  .heroVisual { min-height: 220px; }
+  .visualOrb { width: 150px; height: 150px; }
+  .orbCore { width: 62px; height: 62px; font-size: 31px; }
+  .section { padding-block: 52px; }
+  .featureGrid, .downloadGrid { grid-template-columns: 1fr; }
+  .feature { min-height: 0; }
+  .contributionCard, .technologyPanel, .statusPanel { padding: 22px; }
+  .statusSection { padding-block: 40px 52px; }
+  .footer { flex-wrap: wrap; padding-block: 15px; }
+}
